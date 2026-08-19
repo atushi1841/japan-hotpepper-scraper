@@ -1,0 +1,33 @@
+{
+  "actorSpecification": 1,
+  "name": "japan-hotpepper-scraper",
+  "title": "Japan HotPepper Gourmet Restaurants Scraper — Menu, Budget & Access",
+  "version": "0.1",
+  "buildTag": "latest",
+  "dockerfile": "./Dockerfile",
+  "readme": "./README.md",
+  "input": "./INPUT_SCHEMA.json",
+  "outputSchema": {
+    "actorOutputSchemaVersion": 1,
+    "title": "Restaurant",
+    "description": "HotPepper Gourmet restaurant listing",
+    "type": "object",
+    "properties": {
+      "shopId": {"title": "Shop ID", "type": "string", "description": "HotPepper shop identifier", "template": "{{shopId}}"},
+      "name": {"title": "Name", "type": "string", "description": "Restaurant name", "template": "{{name}}"},
+      "genre": {"title": "Genre", "type": "string", "description": "Food genre label", "template": "{{genre}}"},
+      "genreCode": {"title": "Genre Code", "type": "string", "description": "Genre URL code", "template": "{{genreCode}}"},
+      "catchphrase": {"title": "Catchphrase", "type": "string", "description": "Restaurant tagline", "template": "{{catchphrase}}"},
+      "dinnerBudget": {"title": "Dinner Budget", "type": "string", "description": "Dinner price range", "template": "{{dinnerBudget}}"},
+      "lunchBudget": {"title": "Lunch Budget", "type": "string", "description": "Lunch price range", "template": "{{lunchBudget}}"},
+      "access": {"title": "Access", "type": "string", "description": "Nearest station & walk time", "template": "{{access}}"},
+      "area": {"title": "Area Code", "type": "string", "description": "Prefecture area code", "template": "{{area}}"},
+      "url": {"title": "URL", "type": "string", "description": "Restaurant page URL", "template": "{{url}}"},
+      "imageUrl": {"title": "Image URL", "type": "string", "description": "Main photo URL", "template": "{{imageUrl}}"},
+      "lat": {"title": "Latitude", "type": "string", "description": "Latitude", "template": "{{lat}}"},
+      "lon": {"title": "Longitude", "type": "string", "description": "Longitude", "template": "{{lon}}"},
+      "isSponsored": {"title": "Sponsored", "type": "string", "description": "Whether listing is PR/sponsored", "template": "{{isSponsored}}"}
+    },
+    "required": ["shopId", "name"]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "title": "Japan HotPepper Gourmet Restaurants Scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "area": {
+      "title": "Area (Prefecture)",
+      "type": "string",
+      "description": "Prefecture to scrape. Use a keyword (tokyo, osaka, hokkaido, kanagawa...) or a code (SA11=Tokyo, SA23=Osaka...).",
+      "editor": "textfield",
+      "prefill": "tokyo"
+    },
+    "genre": {
+      "title": "Genre (Food Type)",
+      "type": "string",
+      "description": "Food genre. Use a keyword (izakaya, ramen, yoshoku...) or a code (G001=Izakaya, G013=Ramen...).",
+      "editor": "textfield",
+      "prefill": "izakaya"
+    },
+    "maxItems": {
+      "title": "Max Items",
+      "type": "integer",
+      "description": "Maximum number of restaurants to collect (per area+genre).",
+      "editor": "number",
+      "default": 100,
+      "minimum": 1
+    },
+    "maxPages": {
+      "title": "Max Pages",
+      "type": "integer",
+      "description": "Maximum number of listing pages to crawl (1 page = 20 restaurants).",
+      "editor": "number",
+      "default": 5,
+      "minimum": 1
+    },
+    "proxyConfiguration": {
+      "title": "Proxy Configuration",
+      "type": "object",
+      "description": "Use Apify proxy to avoid IP blocking.",
+      "editor": "proxy",
+      "prefill": {"useApifyProxy": true},
+      "default": {"useApifyProxy": true}
+    }
+  },
+  "required": ["area", "genre"]
+}
