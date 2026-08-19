@@ -160,7 +160,7 @@ async def run(actor_input, actor=None):
                 html = await fetch_page(client, url)
             except Exception as e:
                 if actor is not None:
-                    await Actor.log.warning(f"page {page} error: {e}")
+                    Actor.log.warning(f"page {page} error: {e}")
                 else:
                     print(f"WARN page {page} error: {e}")
                 break
@@ -193,7 +193,7 @@ async def run(actor_input, actor=None):
                     print(json.dumps(item, ensure_ascii=False))
                 collected += 1
             if actor is not None:
-                await Actor.log.info(f"page {page}: collected {collected}/{max_items} ({len(shops)} cards)")
+                Actor.log.info(f"page {page}: collected {collected}/{max_items} ({len(shops)} cards)")
             else:
                 print(f"DEBUG page {page}: collected {collected}/{max_items} ({len(shops)} cards)")
 
