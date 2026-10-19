@@ -57,3 +57,13 @@ Perfect for **Japan food market research**, **restaurant lead generation**, **tr
 - Reviews/scores are not part of the listing HTML (HotPepper uses a reservation model, not ratings)
 - `dinnerBudget` / `lunchBudget` may be `null` when the restaurant doesn't display a budget
 - Listings marked `isSponsored: true` are PR placements (paid)
+
+---
+
+## Gumroad Products
+
+- [FREE Sample – Japan Hobby & Collectibles Market Price Dataset](https://atushi5.gumroad.com/l/kutuxe?utm_source=github_readme&utm_medium=readme&utm_campaign=japan_hobby)
+- [Japanese Anime Figure & Collectibles Market Price Dataset (Weekly CSV)](https://atushi5.gumroad.com/l/agyhq?utm_source=github_readme&utm_medium=readme&utm_campaign=japan_hobby)
+- [週次レポート｜日本ホビー・中古市場マーケット動向](https://atushi5.gumroad.com/l/qdyyyi?utm_source=github_readme&utm_medium=readme&utm_campaign=japan_hobby)
+
+> Source data: [Apify Store – fruitful_quintessence](https://apify.com/fruitful_quintessence)
